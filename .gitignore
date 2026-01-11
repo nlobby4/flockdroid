@@ -1,0 +1,35 @@
+# Gradle files
+.gradle/
+build/
+
+# Kotlin specific
+# Recent Kotlin versions store project-level data here
+.kotlin/
+
+# Local configuration (contains your local SDK path)
+local.properties
+
+# Android Studio / IntelliJ files
+.idea/workspace.xml
+.idea/libraries/
+.idea/modules.xml
+.idea/gradle.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/caches/
+*.iml
+
+# Log files
+*.log
+hs_err_pid*
+replay_pid*
+
+# Built application files
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# OS specific
+.DS_Store
+Thumbs.db
