@@ -70,8 +70,6 @@ class MainActivity : AppCompatActivity() {
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
 
-                // Inject your mods after page loads
-                injectMods()
             }
         }
 
@@ -85,37 +83,4 @@ class MainActivity : AppCompatActivity() {
         WebView.setWebContentsDebuggingEnabled(true)
     }
 
-    private fun injectMods() {
-        try {
-            val injectedJs = assets.open("injected.js").bufferedReader().use { it.readText() }
-
-            // Wait for window.room to be ready before injecting
-            val wrappedCode = """
-                (function() {
-                    console.log('[FlockDroid] Waiting for FlockMod to load...');
-                    
-                    var checkReady = setInterval(function() {
-                        if (typeof window.room !== 'undefined' && window.room !== null) {
-                            console.log('[FlockDroid] FlockMod ready, injecting mods...');
-                            clearInterval(checkReady);
-                            
-                            ${injectedJs}
-                        }
-                    }, 100);
-                    
-                    setTimeout(function() {
-                        clearInterval(checkReady);
-                        console.log('[FlockDroid] Timeout waiting for FlockMod');
-                    }, 30000);
-                })();
-            """.trimIndent()
-
-            webView.evaluateJavascript(wrappedCode) {
-                Log.d("FlockMod", "Mods injection initiated")
-            }
-
-        } catch (e: Exception) {
-            Log.e("FlockMod", "Failed to inject mods", e)
-        }
-    }
 }
