@@ -33,3 +33,6 @@ replay_pid*
 # OS specific
 .DS_Store
 Thumbs.db
+
+# Claude
+tmpclaude-*
