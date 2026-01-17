@@ -2,9 +2,8 @@
 
 Flockmod is a collaborative drawing platform where artists can create together in real-time on shared canvases. This project packages a heavily modified version of Flockmod into a native Android application using Android Studio and WebView technology.
 
-The app wraps the modded Flockmod web client, providing full access to all drawing tools, collaboration features, and mod enhancements directly on your Android device. This includes pressure-sensitive stylus support for tablets, making it ideal for artists who want to draw on the go while still benefiting from the extensive mod features developed by Zexium and others.
+The app wraps the modded Flockmod web client, providing full access to all drawing tools, collaboration features, and mod enhancements directly on your Android device. This includes pressure-sensitive stylus support for tablets, making it ideal for artists who want to draw on the go while still benefiting from the extensive mod features developed by Zexium and D.
 
-Whether you're participating in collaborative art sessions, practicing your digital art skills, or just want a portable way to access Flockmod with all the mod enhancements, this Android app provides a streamlined experience without needing a desktop browser.
 
 ## Key Features
 
